@@ -1,7 +1,3 @@
-delete from empresa_moeda;
-delete from empresa;
-delete from moeda;
-
 insert into moeda (data_dadastro, data_atualizacao, sigla , tipo_moeda, valor)
 values
        (NOW(), NOW(), 'USD', 'Dolár', 5.21),

@@ -35,6 +35,11 @@ public class EmpresaService {
     @Autowired
     private MoedaClient moedaClient;
 
+   // Infelizmente tive uns contra tempo não deu tempo para mim completar todo o projeto, faltou e fazer e
+   // implementar os testes, e faltou a parte de salvar as contação no banco de dados,
+   // faltou implementar algumas exception.
+   // Mas de qualquer maneira eu gostei muito de fazer este teste.
+   // e agradeço pela atenção e espero que vocês gostem do que eu fiz.
 
     // Começando a implementação
     // de atualição da Moedas
