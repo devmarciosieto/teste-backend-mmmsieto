@@ -1,5 +1,6 @@
 package br.com.guaranisistemas.guaranisistemasapi.api.controller;
 
+import br.com.guaranisistemas.guaranisistemasapi.client.MoedaClient;
 import br.com.guaranisistemas.guaranisistemasapi.domain.model.Moeda;
 import br.com.guaranisistemas.guaranisistemasapi.domain.repository.MoedaRepository;
 import br.com.guaranisistemas.guaranisistemasapi.domain.service.MoedaService;

@@ -1,12 +1,15 @@
 package br.com.guaranisistemas.guaranisistemasapi.api.modelDTO;
 
+import br.com.guaranisistemas.guaranisistemasapi.domain.model.Endereco;
+
 import java.util.List;
 
-public class EmpresaOutList {
+public class EmpresaDTO {
 
     private String cnpj;
     private String nome;
     private String email;
+    private Endereco endereco;
     private List<MoedaDTO> moedasTrabalho;
 
     public String getCnpj() {
@@ -39,5 +42,12 @@ public class EmpresaOutList {
 
     public void setMoedasTrabalho(List<MoedaDTO> moedasTrabalho) {
         this.moedasTrabalho = moedasTrabalho;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 }

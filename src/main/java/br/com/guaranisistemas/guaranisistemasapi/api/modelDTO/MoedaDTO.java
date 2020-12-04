@@ -1,12 +1,13 @@
 package br.com.guaranisistemas.guaranisistemasapi.api.modelDTO;
 
 import java.math.BigDecimal;
+import java.text.NumberFormat;
 
-public class MoedaOutDTO {
+public class MoedaDTO {
 
     private String moedaTrabalho;
 
-    private BigDecimal cotacaoAtual;
+    private String cotacaoAtual;
 
     public String getMoedaTrabalho() {
         return moedaTrabalho;
@@ -16,11 +17,12 @@ public class MoedaOutDTO {
         this.moedaTrabalho = moedaTrabalho;
     }
 
-    public BigDecimal getCotacaoAtual() {
-        return cotacaoAtual;
+    public String getCotacaoAtual() {
+        BigDecimal bigDecimalCurrency = new BigDecimal(cotacaoAtual);
+        return NumberFormat.getCurrencyInstance().format(bigDecimalCurrency);
     }
 
-    public void setCotacaoAtual(BigDecimal cotacaoAtual) {
+    public void setCotacaoAtual(String cotacaoAtual) {
         this.cotacaoAtual = cotacaoAtual;
     }
 }

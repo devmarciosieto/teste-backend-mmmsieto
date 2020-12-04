@@ -9,6 +9,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+
 @Service
 public class MoedaService {
 
@@ -39,8 +40,6 @@ public class MoedaService {
         } catch (DataIntegrityViolationException e) {
             throw new EntidadeEmUsoException(String.format(MSG_MOEDA_EM_USO, id));
         }
-
     }
-
 
 }

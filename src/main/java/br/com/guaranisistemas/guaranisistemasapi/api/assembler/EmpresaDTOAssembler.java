@@ -1,5 +1,6 @@
 package br.com.guaranisistemas.guaranisistemasapi.api.assembler;
 
+import br.com.guaranisistemas.guaranisistemasapi.api.modelDTO.EmpresaDTO;
 import br.com.guaranisistemas.guaranisistemasapi.api.modelDTO.EmpresaOutList;
 import br.com.guaranisistemas.guaranisistemasapi.domain.model.Empresa;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,13 +17,17 @@ public class EmpresaDTOAssembler {
     @Autowired
     private ModelMapper modelMapper;
 
-    public EmpresaOutList toModel(Empresa restaurante) {
-        return modelMapper.map(restaurante, EmpresaOutList.class);
+    public EmpresaOutList toModel(Empresa empresa) {
+        return modelMapper.map(empresa, EmpresaOutList.class);
     }
 
-    public List<EmpresaOutList> toCollectionModel(List<Empresa> restaurantes) {
-        return restaurantes.stream()
-                .map(restaurante -> toModel(restaurante))
+    public EmpresaDTO toModelDetails(Empresa empresa) {
+        return modelMapper.map(empresa, EmpresaDTO.class);
+    }
+
+    public List<EmpresaOutList> toCollectionModel(List<Empresa> empresas) {
+        return empresas.stream()
+                .map(empresa -> toModel(empresa))
                 .collect(Collectors.toList());
     }
 

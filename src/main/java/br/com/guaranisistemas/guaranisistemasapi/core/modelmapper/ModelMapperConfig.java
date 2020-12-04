@@ -1,7 +1,8 @@
 package br.com.guaranisistemas.guaranisistemasapi.core.modelmapper;
 
+import br.com.guaranisistemas.guaranisistemasapi.api.modelDTO.EmpresaDTO;
 import br.com.guaranisistemas.guaranisistemasapi.api.modelDTO.EmpresaOutList;
-import br.com.guaranisistemas.guaranisistemasapi.api.modelDTO.MoedaOutDTO;
+import br.com.guaranisistemas.guaranisistemasapi.api.modelDTO.MoedaDTO;
 import br.com.guaranisistemas.guaranisistemasapi.domain.model.Empresa;
 import br.com.guaranisistemas.guaranisistemasapi.domain.model.Moeda;
 import org.modelmapper.ModelMapper;
@@ -18,10 +19,12 @@ public class ModelMapperConfig {
         modelMapper.createTypeMap(Empresa.class, EmpresaOutList.class)
                 .addMapping(Empresa::getMoedas, EmpresaOutList::setMoedasTrabalho);
 
-        modelMapper.createTypeMap(Moeda.class, MoedaOutDTO.class)
-                .addMapping(Moeda::getTipoMoeda, MoedaOutDTO::setMoedaTrabalho)
-                .addMapping(Moeda::getValor, MoedaOutDTO::setCotacaoAtual);
+        modelMapper.createTypeMap(Empresa.class, EmpresaDTO.class)
+                .addMapping(Empresa::getMoedas, EmpresaDTO::setMoedasTrabalho);
 
+        modelMapper.createTypeMap(Moeda.class, MoedaDTO.class)
+                .addMapping(Moeda::getTipoMoeda, MoedaDTO::setMoedaTrabalho)
+                .addMapping(Moeda::getValor, MoedaDTO::setCotacaoAtual);
 
         return modelMapper;
     }
