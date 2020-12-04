@@ -30,6 +30,13 @@ public class EmpresaController {
 
     @Autowired
     private EmpresaDTOAssembler empresaDTOAssembler;
+    
+    // no meu git tem algumas api em java que estão rodando na aws que desenvolvi 
+    // também tem alguns frontend em angular consumindo a api 
+    // estes repositório estão privado porque estão com a senhas de banco de dados 
+    // do S3, de email mais caso tenha caso tenha interesse conhecer estes projetos
+    // posso retirar estas propriedade 
+    // e enviar o link estes repositórios
 
     // aplicação deverá “economizar” chamadas a API de terceiros a fim de evitar custos desnecessários
     // com banda de rede e custos de requisições com API’s.
