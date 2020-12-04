@@ -40,6 +40,8 @@ public class EmpresaController {
     // não vai fazer requisição para api de terceiros, só no próximo dia, a primeira pesquisa que vai fazer a requisição
     // e atualizar a nossa base.
 
+    // E eu também estou consirando que uma empresa possa trabalhar com mais de uma moedas
+
     @GetMapping("/{id}")
     public EmpresaDTO BuscarId(@PathVariable Long id) {
         return empresaDTOAssembler.toModelDetails(empresaService.buscarOuFalhar(id)) ;
